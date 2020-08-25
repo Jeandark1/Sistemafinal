@@ -194,7 +194,7 @@
                              
                           <h4 class="modal-title">   </h4>                                           
                     <span class="input-group-addon"><i class="fa  fa-qq"> </i></span>
-                    <input type="date"  class=" form-control input-lg" name="fecha" id="fechancu" step="7"  data-datepicker-color="primary">
+                    <input type="date"  class=" form-control input-lg" name="fecha" step="7"  data-datepicker-color="primary">
                   
                 
                     </div>   
