@@ -29,13 +29,15 @@ class ModeloUsuarios{
 	INGRESAR USUARIO
 =============================================*/
 
-	static public function mdlIngresarUsuario($tabla, $datos,$trot)
+	static public function mdlIngresarUsuario($tabla, $datos,$trot,$llave)
     {
 
+		if($llave === "Administrador"){
 
-
-
-		if($datos["perfil"] == "Administrador"){
+			echo "<script>";
+			echo "alert('";
+			echo  $llave;
+		    echo "')</script>";
 
 			$stmt = Conexion::conectar()->prepare("INSERT INTO $tabla(nombre,ap_paterno,ap_materno,usuario,password,perfil,foto,genero,email,celular,direccion,dni,cargo,fech_nac,esta_superu) VALUES ( :nombre,:ap_paterno,:ap_materno,:usuario,:password,:perfil,:foto,:genero,:email,:celular,:direccion,:dni,:cargo,:fech_nac,:esta_superu)");
 			$stmt->bindParam(":nombre", $datos["nombre"], PDO::PARAM_STR);
@@ -55,7 +57,7 @@ class ModeloUsuarios{
 			$stmt->bindParam(":esta_superu",$trot, PDO::PARAM_STR);
 			if ($stmt->execute()) {return "ok";} else {return "error";}
 			$stmt->close();
-        $stmt = null;
+            $stmt = null;
 
 		}else
 		{
@@ -76,11 +78,17 @@ class ModeloUsuarios{
 			$stmt->bindParam(":cargo", $datos["cargo"], PDO::PARAM_STR);
 			$stmt->bindParam(":fech_nac", $datos["fech_nac"], PDO::PARAM_STR);
 			
+
+
 			if ($stmt->execute()) {return "ok";} else {return "error";}
 			$stmt->close();
         $stmt = null;
 		}
 
+		echo "<script>";
+			echo "alert('";
+			echo  $trot;
+		    echo "')</script>";
 	}
 	/*=============================================
 	EDITAR USUARIO
