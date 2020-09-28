@@ -466,29 +466,29 @@ $("#controlps").change(function(){
 })
 
 
-/*=============================================
-validar fecha
-=============================================*/
-$("#fechancu").change(function(){
+// /*=============================================
+// validar fecha
+// =============================================*/
+// $("#fechancu").change(function(){
 	
-	$(".alert").remove();
+// 	$(".alert").remove();
 	
-		  var fec = $(this).val();
+// 		  var fec = $(this).val();
 		 
-      var hoy  = new Date();
-      var fechaFormulario = new Date(fec);
+//       var hoy  = new Date();
+//       var fechaFormulario = new Date(fec);
 
-           // Compara solo las fechas => no las horas!!
-          hoy.setHours(0,0,0,0);
+//            // Compara solo las fechas => no las horas!!
+//           hoy.setHours(0,0,0,0);
 
-           if (hoy >= fechaFormulario) {
+//            if (hoy >= fechaFormulario) {
   
-              }
-                else {
-					$("#fechancu").parent().after('<div class="alert alert-warning">la fecha de nac. no puede superar a la fecha actual</div>');
-					$("#fechancu").val("");
-				}
-})
+//               }
+//                 else {
+// 					$("#fechancu").parent().after('<div class="alert alert-warning">la fecha de nac. no puede superar a la fecha actual</div>');
+// 					$("#fechancu").val("");
+// 				}
+// })
 
 /*=============================================
  ACTIVAR Y DESACTIVADOR OBSEERVADOR DE CONTRASEÑA
