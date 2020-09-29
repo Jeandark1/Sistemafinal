@@ -29,17 +29,17 @@ class ModeloUsuarios{
 	INGRESAR USUARIO
 =============================================*/
 
-	static public function mdlIngresarUsuario($tabla, $datos,$trot,$llave)
+	static public function mdlIngresarUsuario($tabla, $datos,$trot,$llave,$estados)
     {
 
 		if($llave === "Administrador"){
 
 			echo "<script>";
 			echo "alert('";
-			echo  $llave;
+			echo  $estados;
 		    echo "')</script>";
 
-			$stmt = Conexion::conectar()->prepare("INSERT INTO $tabla(nombre,ap_paterno,ap_materno,usuario,password,perfil,foto,genero,email,celular,direccion,dni,cargo,fech_nac,esta_superu) VALUES ( :nombre,:ap_paterno,:ap_materno,:usuario,:password,:perfil,:foto,:genero,:email,:celular,:direccion,:dni,:cargo,:fech_nac,:esta_superu)");
+			$stmt = Conexion::conectar()->prepare("INSERT INTO $tabla(nombre,ap_paterno,ap_materno,usuario,password,perfil,foto,estado,genero,email,celular,direccion,dni,cargo,fech_nac,esta_superu) VALUES ( :nombre,:ap_paterno,:ap_materno,:usuario,:password,:perfil,:foto,:estado,:genero,:email,:celular,:direccion,:dni,:cargo,:fech_nac,:esta_superu)");
 			$stmt->bindParam(":nombre", $datos["nombre"], PDO::PARAM_STR);
 			$stmt->bindParam(":ap_paterno", $datos["ap_paterno"], PDO::PARAM_STR);
 			$stmt->bindParam(":ap_materno", $datos["ap_materno"], PDO::PARAM_STR);
@@ -55,6 +55,8 @@ class ModeloUsuarios{
 			$stmt->bindParam(":cargo", $datos["cargo"], PDO::PARAM_STR);
 			$stmt->bindParam(":fech_nac", $datos["fech_nac"], PDO::PARAM_STR);
 			$stmt->bindParam(":esta_superu",$trot, PDO::PARAM_STR);
+			$stmt->bindParam(":estado",$estados, PDO::PARAM_STR);
+
 			if ($stmt->execute()) {return "ok";} else {return "error";}
 			$stmt->close();
             $stmt = null;

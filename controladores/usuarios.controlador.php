@@ -157,6 +157,7 @@ class ControladorUsuarios{
 				$trot = "1";
 	            $encriptar = crypt($_POST["nuevoPassword"], '$2a$07$asxx54ahjppf45sd87a5a4dDDGsystemdev$');
 				$llave = $_POST["NuevoPerfil"];
+				$estados = "1";
 				$datos = array("nombre" => $_POST["nuevonombre"],
 							   "ap_paterno" => $_POST["ApPaterno"],
 							   "ap_materno" => $_POST["ApMaterno"], 
@@ -164,7 +165,7 @@ class ControladorUsuarios{
 							   "celular" => $_POST["nrocel"], 
 							   "genero" => $_POST["generoc"],  
 							   "fech_nac" => $_POST["fecha"], 
-							   "perfil" => $_POST["NuevoPerfil"], 
+							   "perfil" => $_POST["NuevoPerfil"],
 							   "usuario" => $_POST["nuevousuario"], 
 							   "cargo" => $_POST["nuevocargo"], 
                                "password" =>$encriptar,
@@ -172,7 +173,7 @@ class ControladorUsuarios{
 							 "foto"=>$ruta);
 							 
 							                
-                $respuesta = ModeloUsuarios::mdlIngresarUsuario($tabla, $datos,$trot,$llave);
+                $respuesta = ModeloUsuarios::mdlIngresarUsuario($tabla, $datos,$trot,$llave,$estados);
 
              
                 if ($respuesta === "ok") {
