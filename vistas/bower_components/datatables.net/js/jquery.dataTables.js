@@ -8442,7 +8442,7 @@
 				switch( match[2] ) {
 					case 'visIdx':
 					case 'visible':
-						var idx = parseInt( match[1], 10 );
+						var idx = parseInt( match[1], 1000 );
 						// Visible index given, convert to column index
 						if ( idx < 0 ) {
 							// Counting from the right
@@ -11131,7 +11131,7 @@
 		 * feature enabled (`lengthChange`) then the end user will be able to override
 		 * this to a custom setting using a pop-up menu.
 		 *  @type int
-		 *  @default 10
+		 *  @default 1000
 		 *
 		 *  @dtopt Options
 		 *  @name DataTable.defaults.pageLength
@@ -11143,7 +11143,7 @@
 		 *      } );
 		 *    } )
 		 */
-		"iDisplayLength": 10,
+		"iDisplayLength": 1000,
 	
 	
 		/**
@@ -11565,11 +11565,11 @@
 			 *      $('#example').dataTable( {
 			 *        "language": {
 			 *          "lengthMenu": 'Display <select>'+
-			 *            '<option value="10">10</option>'+
-			 *            '<option value="20">20</option>'+
-			 *            '<option value="30">30</option>'+
-			 *            '<option value="40">40</option>'+
+			 *            '<option value="1000">1000</option>'+
+			 *            '<option value="500">500</option>'+
+			 *            '<option value="100">100</option>'+
 			 *            '<option value="50">50</option>'+
+			 *            '<option value="15">15</option>'+
 			 *            '<option value="-1">All</option>'+
 			 *            '</select> records'
 			 *        }
@@ -13588,9 +13588,9 @@
 		/**
 		 * Paging display length
 		 *  @type int
-		 *  @default 10
+		 *  @default 1000
 		 */
-		"_iDisplayLength": 10,
+		"_iDisplayLength": 1000,
 	
 		/**
 		 * Paging start point - aiDisplay index
