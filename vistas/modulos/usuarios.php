@@ -87,7 +87,7 @@
                       <td>'.$value["celular"].'</td>
                       <td>'.$value["fecha"].'</td>
                       <td>'.$value["fech_nac"].'</td>
-                      <td>   <div class="btn btn-social-icon btn-linkedin btnsusecreto" idusuariosecret="'.$value["cod_user"].'"> <i class="fa fa-linkedin"><span></span></i></div>
+                      <td>   <button class="btn btn-social-icon btn-linkedin btnsusecreto" idusuariosecret="'.$value["cod_user"].'"> <i class="fa fa-linkedin"><span></span></i></button>
           
                       </td>
 
