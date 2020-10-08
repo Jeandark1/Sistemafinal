@@ -1364,7 +1364,7 @@
 	
 	
 	var _intVal = function ( s ) {
-		var integer = parseInt( s, 10 );
+		var integer = parseInt( s, 1000 );
 		return !isNaN(integer) && isFinite(s) ? integer : null;
 	};
 	
@@ -4109,8 +4109,8 @@
 		}
 	
 		_fnClearTable( settings );
-		settings._iRecordsTotal   = parseInt(recordsTotal, 10);
-		settings._iRecordsDisplay = parseInt(recordsFiltered, 10);
+		settings._iRecordsTotal   = parseInt(recordsTotal, 1000);
+		settings._iRecordsDisplay = parseInt(recordsFiltered, 1000);
 	
 		for ( var i=0, ien=data.length ; i<ien ; i++ ) {
 			_fnAddData( settings, data[i] );
@@ -4776,7 +4776,7 @@
 	
 	function _fnLengthChange ( settings, val )
 	{
-		var len = parseInt( val, 10 );
+		var len = parseInt( val, 1000 );
 		settings._iDisplayLength = len;
 	
 		_fnLengthOverflow( settings );
@@ -14905,7 +14905,7 @@
 					flo = flo.toFixed( precision );
 					d = Math.abs( flo );
 	
-					var intPart = parseInt( d, 10 );
+					var intPart = parseInt( d, 1000 );
 					var floatPart = precision ?
 						decimal+(d - intPart).toFixed( precision ).substring( 2 ):
 						'';
