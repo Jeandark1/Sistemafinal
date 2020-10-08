@@ -57,7 +57,7 @@
 			<form class="login100-form validate-form" method="post" >
 
 				<span class="login100-form-title p-b-37">
-					INGRESAR AL SECION
+					INGRESAR AL SECION1
 				</span>
 
 				<div class="wrap-input100 validate-input m-b-20 " data-validate="ingresa tu usuario">
