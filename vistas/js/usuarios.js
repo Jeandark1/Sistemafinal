@@ -140,9 +140,7 @@ $(document).on('click', '.btnActivar',function (e) {
 			 $(this).removeClass('btn-danger');
 			 $(this).html('Activado');
 			 $(this).attr('estadousuario',0);
-   
 		 }
-
 })
 
 
@@ -250,7 +248,9 @@ $(document).on('click', '.btnsusecreto',function (e) {
   /*=============================================
 ACTIVAR USUARIO MOD1
 =============================================*/
-$(".btnActivarmod4").change(function(){
+
+
+$(document).on('click', '.btnActivarmod1',function (e) {
 
 	var idusuariomod1 = $(this).attr("idusuariomod1");
 	var estadousuariomod1 = $(this).attr("estadousuariomod1");
@@ -286,16 +286,15 @@ $(".btnActivarmod4").change(function(){
 			 $(this).removeClass('btn-danger');
 			 $(this).html('Activado');
 			 $(this).attr('estadousuariomod1',0);
-   
 		 }
-
 })
 
 
 /*=============================================
 ACTIVAR USUARIO MOD2
 =============================================*/
-	$(".btnActivarmod4").change(function(){
+$(document).on('click', '.btnActivarmod2',function (e) {
+
 	var idusuariomod2 = $(this).attr("idusuariomod2");
 	var estadousuariomod2 = $(this).attr("estadousuariomod2");
 
@@ -341,8 +340,7 @@ ACTIVAR USUARIO MOD2
 /*=============================================
 ACTIVAR USUARIO MOD3
 =============================================*/
-
-	$(".btnActivarmod3").change(function(){
+$(document).on('click', '.btnActivarmod3',function (e) {
 	
 	var idusuariomod3 = $(this).attr("idusuariomod3");
 	var estadousuariomod3 = $(this).attr("estadousuariomod3");
