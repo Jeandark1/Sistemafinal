@@ -50,8 +50,8 @@ $(".nuevafoto").change(function(){
 /*=============================================
 EDITAR USUARIO
 =============================================*/
+$(document).on('click', '.btnEditarUsuario',function (e) {
 
-$(".btnEditarUsuario").click(function(){
 	
 	var idusuario = $(this).attr("idusuario");
 	console.log("idusuario:",idusuario);
@@ -187,8 +187,7 @@ $("#nuevousuario").change(function(){
 /*=============================================
 ELIMINAR USUARIO
 =============================================*/
-
-$(".btnEliminarUsuario").click(function(){
+$(document).on('click', '.btnEliminarUsuario',function (e) {
 	
   var idusuario = $(this).attr("idusuario");
   var fotoUsuario = $(this).attr("fotoUsuario");
@@ -222,8 +221,8 @@ $(".btnEliminarUsuario").click(function(){
 ACCESOS U
 =============================================*/
 
-$(".btnsusecreto").click(function(){
-	
+(document).on('click', '.btnsusecreto',function (e) {
+
 	var registro = $(this).attr("idusuariosecret");
 	
 	swal({
@@ -252,8 +251,8 @@ $(".btnsusecreto").click(function(){
   /*=============================================
 ACTIVAR USUARIO MOD1
 =============================================*/
+(document).on('click', '.btnActivarmod1',function (e) {
 
-$(".btnActivarmod1").click(function(){
 	
 	var idusuariomod1 = $(this).attr("idusuariomod1");
 	var estadousuariomod1 = $(this).attr("estadousuariomod1");
@@ -298,7 +297,7 @@ $(".btnActivarmod1").click(function(){
 /*=============================================
 ACTIVAR USUARIO MOD2
 =============================================*/
-$(".btnActivarmod2").click(function(){
+(document).on('click', '.btnActivarmod2',function (e) {
 	
 	var idusuariomod2 = $(this).attr("idusuariomod2");
 	var estadousuariomod2 = $(this).attr("estadousuariomod2");
@@ -345,8 +344,8 @@ $(".btnActivarmod2").click(function(){
 /*=============================================
 ACTIVAR USUARIO MOD3
 =============================================*/
+(document).on('click', '.btnActivarmod3',function (e) {
 
-$(".btnActivarmod3").click(function(){
 	
 	var idusuariomod3 = $(this).attr("idusuariomod3");
 	var estadousuariomod3 = $(this).attr("estadousuariomod3");
@@ -392,9 +391,8 @@ $(".btnActivarmod3").click(function(){
 /*=============================================
 ACTIVAR USUARIO MOD4
 =============================================*/
+(document).on('click', '.btnActivarmod4',function (e) {
 
-$(".btnActivarmod4").click(function(){
-	
 	var idusuariomod4 = $(this).attr("idusuariomod4");
 	var estadousuariomod4 = $(this).attr("estadousuariomod4");
 
@@ -492,7 +490,8 @@ $("#controlps").change(function(){
 /*=============================================
  ACTIVAR Y DESACTIVADOR OBSEERVADOR DE CONTRASEÑA
 =============================================*/
-$(".btnActivarvista").click(function(){
+(document).on('click', '.btnActivarvista',function (e) {
+
 
 	var estadousuario = $(this).attr("activarver");
 	if(estadousuario == 1){
