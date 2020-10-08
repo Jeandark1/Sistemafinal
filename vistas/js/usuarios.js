@@ -221,7 +221,9 @@ $(document).on('click', '.btnEliminarUsuario',function (e) {
 ACCESOS U
 =============================================*/
 
-(document).on('click', '.btnsusecreto',function (e) {
+(document).on('click', '#btnsusecreto',function () {
+	
+
 
 	var registro = $(this).attr("idusuariosecret");
 	
