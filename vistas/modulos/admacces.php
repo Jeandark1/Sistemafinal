@@ -103,7 +103,7 @@
        <div class="col-md-3 col-sm-6 col-xs-12 ">
         ';
         if ($mod1 != 0) {
-            echo '  <div class="info-box bg-blue-gradient disabled">
+            echo '  <div class="info-box bg-blue-gradient">
                                <span class="info-box-icon bg-navy-active"><i class="fa fa-group"></i></span>
                      <div class="info-box-content ">
                                 <span class="info-box-text">MODULO REGISTRO DE ACTAS</span>
@@ -114,7 +114,7 @@
                   </div>
         <!-- /.col -->';
         } else {
-            echo '<div class="info-box  disabled">
+            echo '<div class="info-box">
             <span class="info-box-icon bg-navy-active"><i class="fa fa-group"></i></span>
                     <div class="info-box-content ">
              <span class="info-box-text">MODULO REGISTRO DE ACTAS</span>
