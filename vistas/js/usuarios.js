@@ -104,8 +104,7 @@ $(".btnEditarUsuario").click(function(){
 /*=============================================
 ACTIVAR USUARIO
 =============================================*/
-
-$(".btnActivar").click(function(){
+$(document).on('click', '.btnActivar',function (e) {
 
 	var idusuario = $(this).attr("idusuario");
 	var estadousuario = $(this).attr("estadousuario");

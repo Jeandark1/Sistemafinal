@@ -1364,7 +1364,7 @@
 	
 	
 	var _intVal = function ( s ) {
-		var integer = parseInt( s, 1000 );
+		var integer = parseInt( s, 10 );
 		return !isNaN(integer) && isFinite(s) ? integer : null;
 	};
 	
@@ -4109,8 +4109,8 @@
 		}
 	
 		_fnClearTable( settings );
-		settings._iRecordsTotal   = parseInt(recordsTotal, 1000);
-		settings._iRecordsDisplay = parseInt(recordsFiltered, 1000);
+		settings._iRecordsTotal   = parseInt(recordsTotal, 10);
+		settings._iRecordsDisplay = parseInt(recordsFiltered, 10);
 	
 		for ( var i=0, ien=data.length ; i<ien ; i++ ) {
 			_fnAddData( settings, data[i] );
@@ -4776,7 +4776,7 @@
 	
 	function _fnLengthChange ( settings, val )
 	{
-		var len = parseInt( val, 1000 );
+		var len = parseInt( val, 10 );
 		settings._iDisplayLength = len;
 	
 		_fnLengthOverflow( settings );
@@ -8442,7 +8442,7 @@
 				switch( match[2] ) {
 					case 'visIdx':
 					case 'visible':
-						var idx = parseInt( match[1], 1000 );
+						var idx = parseInt( match[1], 10 );
 						// Visible index given, convert to column index
 						if ( idx < 0 ) {
 							// Counting from the right
@@ -9094,8 +9094,8 @@
 		var iThis, iThat;
 	
 		for ( var i=0, iLen=aThat.length ; i<iLen ; i++ ) {
-			iThis = parseInt( aThis[i], 1000 ) || 0;
-			iThat = parseInt( aThat[i], 1000 ) || 0;
+			iThis = parseInt( aThis[i], 10 ) || 0;
+			iThat = parseInt( aThat[i], 10 ) || 0;
 	
 			// Parts are the same, keep comparing
 			if (iThis === iThat) {
@@ -10127,7 +10127,7 @@
 		 * Note that the `pageLength` property will be automatically set to the
 		 * first value given in this array, unless `pageLength` is also provided.
 		 *  @type array
-		 *  @default [ 1000, 500, 100, 50 ]
+		 *  @default [ 10, 25, 50, 100 ]
 		 *
 		 *  @dtopt Option
 		 *  @name DataTable.defaults.lengthMenu
@@ -10135,11 +10135,11 @@
 		 *  @example
 		 *    $(document).ready( function() {
 		 *      $('#example').dataTable( {
-		 *        "lengthMenu": [[1000, 500, 100, -1], [1000, 500, 100, "All"]]
+		 *        "lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]]
 		 *      } );
 		 *    } );
 		 */
-		"aLengthMenu": [ 1000, 500, 100, 50 ],
+		"aLengthMenu": [ 10, 25, 50, 100 ],
 	
 	
 		/**
@@ -11131,7 +11131,7 @@
 		 * feature enabled (`lengthChange`) then the end user will be able to override
 		 * this to a custom setting using a pop-up menu.
 		 *  @type int
-		 *  @default 1000
+		 *  @default 10
 		 *
 		 *  @dtopt Options
 		 *  @name DataTable.defaults.pageLength
@@ -11143,7 +11143,7 @@
 		 *      } );
 		 *    } )
 		 */
-		"iDisplayLength": 1000,
+		"iDisplayLength": 10,
 	
 	
 		/**
@@ -11565,11 +11565,11 @@
 			 *      $('#example').dataTable( {
 			 *        "language": {
 			 *          "lengthMenu": 'Display <select>'+
-			 *            '<option value="1000">1000</option>'+
-			 *            '<option value="500">500</option>'+
-			 *            '<option value="100">100</option>'+
+			 *            '<option value="10">10</option>'+
+			 *            '<option value="20">20</option>'+
+			 *            '<option value="30">30</option>'+
+			 *            '<option value="40">40</option>'+
 			 *            '<option value="50">50</option>'+
-			 *            '<option value="15">15</option>'+
 			 *            '<option value="-1">All</option>'+
 			 *            '</select> records'
 			 *        }
@@ -13588,9 +13588,9 @@
 		/**
 		 * Paging display length
 		 *  @type int
-		 *  @default 1000
+		 *  @default 10
 		 */
-		"_iDisplayLength": 1000,
+		"_iDisplayLength": 10,
 	
 		/**
 		 * Paging start point - aiDisplay index
@@ -14905,7 +14905,7 @@
 					flo = flo.toFixed( precision );
 					d = Math.abs( flo );
 	
-					var intPart = parseInt( d, 1000 );
+					var intPart = parseInt( d, 10 );
 					var floatPart = precision ?
 						decimal+(d - intPart).toFixed( precision ).substring( 2 ):
 						'';
