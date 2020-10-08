@@ -386,7 +386,8 @@ $(document).on('click', '.btnActivarmod3',function (e) {
 /*=============================================
 ACTIVAR USUARIO MOD4
 =============================================*/
-$(".btnActivarmod4").change(function(){
+$(document).on('click', '.btnActivarmod4',function (e) {
+
 	var idusuariomod4 = $(this).attr("idusuariomod4");
 	var estadousuariomod4 = $(this).attr("estadousuariomod4");
 
