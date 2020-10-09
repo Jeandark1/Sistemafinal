@@ -487,6 +487,7 @@ $("#controlps").change(function(){
 =============================================*/
 
 $(".btnActivarvista").change(function(){
+	
 	var estadousuario = $(this).attr("activarver");
 	if(estadousuario == 1){
 

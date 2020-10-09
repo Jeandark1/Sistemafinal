@@ -5,8 +5,10 @@
 EDITAR ESTUDIANTE
 =============================================*/
 
-$(".btnEditarestudiante").click(function(){
+// $(".btnEditarestudiante").click(function(){
     
+
+$(document).on('click', '.btnEditarestudiante',function (e) {
 	var idestudiante = $(this).attr("idestudiante");
 	console.log("idestudiante:",idestudiante);
 	var datos = new FormData();
@@ -45,8 +47,9 @@ $(".btnEditarestudiante").click(function(){
 /*=============================================
 ELIMINAR ESTUDIANTE
 =============================================*/
+$(document).on('click', '.btnEliminarestudiante',function (e) {
 
-$(".btnEliminarestudiante").click(function(){
+// $(".btnEliminarestudiante").click(function(){
 	
     var idestudiante = $(this).attr("idestudiante");
     var reg_univ = $(this).attr("reg_univ");
@@ -75,8 +78,9 @@ $(".btnEliminarestudiante").click(function(){
   /*=============================================
 AGREGAR A MATERIA
 =============================================*/
+$(document).on('click', '.btnagregarestudiante',function (e) {
 
-$(".btnagregarestudiante").click(function(){
+// $(".btnagregarestudiante").click(function(){
     
 	var idestudiantes = $(this).attr("idestudiantes");
 	console.log("idestudiantes:",idestudiantes);
@@ -103,8 +107,9 @@ $(".btnagregarestudiante").click(function(){
 /*=============================================
 BOLETA DEL ESTUDIANTE
 =============================================*/
+$(document).on('click', '.btnboletaestudiante',function (e) {
 
-$(".btnboletaestudiante").click(function(){
+// $(".btnboletaestudiante").click(function(){
 	
   var idestudiantito = $(this).attr("idestudiantito");
   var reg_univ = $(this).attr("reg_univ");
@@ -133,6 +138,7 @@ $(".btnboletaestudiante").click(function(){
 /*=============================================
 REVISAR SI SE REPITE EL ESTUDIANTE REGISTRADO
 =============================================*/
+
 $("#Ci").change(function(){
   
    var Ci =$(this).val();
@@ -253,7 +259,9 @@ $("#nota3").change(function(){
 /*=============================================
 GENERAR PDF DE BOLETA
 =============================================*/
-$(".btnboleta").click(function(){
+$(document).on('click', '.btnboleta',function (e) {
+
+// $(".btnboleta").click(function(){
 
 
 	var idestudiantito = $(this).attr("idestudiantito");
@@ -279,7 +287,9 @@ function generarpdfestudiante(idestudiantito){
 /*=============================================
 ELIMINAR REGISTRO DE MATERIA EN LA BOLETA DE ESTUDIANTE
 =============================================*/
-$(".btneliminardeboleta").click(function(){
+$(document).on('click', '.btneliminardeboleta',function (e) {
+
+// $(".btneliminardeboleta").click(function(){
 	
   var estudianteid = $(this).attr("estudianteid");
   var materiaid = $(this).attr("materiaid");
@@ -307,8 +317,9 @@ $(".btneliminardeboleta").click(function(){
 /*=============================================
  GALERIA DE DOCUMENTOS DEL ESTUDIANTE
 =============================================*/
+$(document).on('click', '.btngaleriaest',function (e) {
 
-$(".btngaleriaest").click(function(){
+// $(".btngaleriaest").click(function(){
 	
   var idestgaleria = $(this).attr("idestgaleria");
   
@@ -336,8 +347,9 @@ $(".btngaleriaest").click(function(){
   /*=============================================
   ID DEL NOMBRE DE LA CARPETA DE GALERIA
 =============================================*/
+$(document).on('click', '.btngleria',function (e) {
 
-$(".btngleria").click(function(){
+// $(".btngleria").click(function(){
     
   var rgistuniv = $(this).attr("rgistuniv");
   var idestg = $(this).attr("idesgaleria");
@@ -361,7 +373,9 @@ $(function () {
 /*=============================================
 VISOR DE LA GALERIA
 =============================================*/
-$(".btnvgaleria").click(function(){
+$(document).on('click', '.btnvgaleria',function (e) {
+
+// $(".btnvgaleria").click(function(){
     
   var fotogaleria = $(this).attr("imgaleria");
   
@@ -434,8 +448,8 @@ $(".nuevacamara").change(function(){
 /*=============================================
 EDITAR DOCUMENTO DE GALERIA
 =============================================*/
- 
-$(".btneditargaleria").click(function(){
+$(document).on('click', '.btneditargaleria',function (e) {
+// $(".btneditargaleria").click(function(){
     
   var iddocumentos = $(this).attr("ediddocumento");
   var matricula = $(this).attr("regdocumento");
@@ -484,8 +498,9 @@ $.ajax({
 /*=============================================
 ELIMINAR DOCUMENTO DE GALERIA 
 =============================================*/
+$(document).on('click', '.btnEliminardocumento',function (e) {
 
-$(".btnEliminardocumento").click(function(){
+// $(".btnEliminardocumento").click(function(){
 	
   var elidocumentog = $(this).attr("elidocumentog");
 var eliestudianteg = $(this).attr("eliestugaleria");
@@ -514,25 +529,25 @@ var elidocg = $(this).attr("elifotodoc");
 /*=============================================
 validar fecha
 =============================================*/
-$("#nacimiento").change(function(){
+// $("#nacimiento").change(function(){
 	
-	$(".alert").remove();
+// 	$(".alert").remove();
 	
-		  var fec = $(this).val();
-		  console.log("fecha:",fec);
+// 		  var fec = $(this).val();
+// 		  console.log("fecha:",fec);
 
-      var hoy  = new Date();
-      var fechaFormulario = new Date(fec);
+//       var hoy  = new Date();
+//       var fechaFormulario = new Date(fec);
 
-           // Compara solo las fechas => no las horas!!
-          hoy.setHours(0,0,0,0);
+//            // Compara solo las fechas => no las horas!!
+//           hoy.setHours(0,0,0,0);
 
-           if (hoy >= fechaFormulario) {
+//            if (hoy >= fechaFormulario) {
   
-              }
-                else {
-					$("#nacimiento").parent().after('<div class="alert alert-warning">la fecha de nac. no puede superar a la fecha actual</div>');
-					$("#nacimiento").val("");
+//               }
+//                 else {
+// 					$("#nacimiento").parent().after('<div class="alert alert-warning">la fecha de nac. no puede superar a la fecha actual</div>');
+// 					$("#nacimiento").val("");
 				
-				}
-})
+// 				}
+// })
