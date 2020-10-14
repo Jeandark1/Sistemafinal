@@ -4,7 +4,9 @@
 /*=============================================
 GENERAR PDF DE HISTORIAL DE CARTA INTERNA
 =============================================*/
-$(".btnhistorialinterna").click(function(){
+$(document).on('click', '.btnhistorialinterna',function (e) {
+
+// $(".btnhistorialinterna").click(function(){
 
 
     var codcartainterna = $(this).attr("codcartainterna");
@@ -29,7 +31,9 @@ function generarpdf(codcartainterna){
 /*=============================================
 GENERAR PDF DE HISTORIAL DE CARTA EXTERNA
 =============================================*/
-$(".btnhistorialexterna").click(function(){
+$(document).on('click', '.btnhistorialexterna',function (e) {
+
+// $(".btnhistorialexterna").click(function(){
 
 
     var codcartahistorialexterna = $(this).attr("codcartahistorialexterna");
@@ -55,7 +59,10 @@ function generarpdfes(codcartahistorialexterna){
  /*=============================================
 GENERAR PDF DE LA CARTA CREADA
 =============================================*/
-$(".btnimprimirecartac").click(function(){
+
+$(document).on('click', '.btnimprimirecartac',function (e) {
+
+// $(".btnimprimirecartac").click(function(){
 	var codcartac = $(this).attr("codcartac");
 	console.log("este es el codigo",codcartac);
       if(codcartac != null){   

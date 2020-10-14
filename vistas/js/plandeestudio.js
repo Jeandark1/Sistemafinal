@@ -1,8 +1,10 @@
 /*=============================================
 EDITAR PLAN DE ESTUDIO
 =============================================*/
+$(document).on('click', '.btnEditarplandeestudios',function (e) {
 
-$(".btnEditarplandeestudios").click(function(){
+
+// $(".btnEditarplandeestudios").click(function(){
     
 	var idplanestudio = $(this).attr("idplanestudio");
 	console.log("idplanestudio:",idplanestudio);
@@ -32,7 +34,10 @@ $(".btnEditarplandeestudios").click(function(){
 ELIMINAR PLAN DE ESTUDIO
 =============================================*/
 
-$(".btnEliminarplanestudio").click(function(){
+$(document).on('click', '.btnEliminarplanestudio',function (e) {
+
+
+// $(".btnEliminarplanestudio").click(function(){
 	
     var idplane = $(this).attr("idplane");
     
@@ -59,7 +64,10 @@ $(".btnEliminarplanestudio").click(function(){
   /*=============================================
 AGREGAR A MATERIA A PLAN DE ESTUDIO
 =============================================*/
-$(".btnagrmateriaplane").click(function(){
+
+$(document).on('click', '.btnagrmateriaplane',function (e) {
+
+// $(".btnagrmateriaplane").click(function(){
 	var  codplan = $(this).attr("codplan");
 	console.log("codplan:",codplan);
             $("#idmateriaplan").val(codplan);
@@ -68,8 +76,9 @@ $(".btnagrmateriaplane").click(function(){
 /*=============================================
 LISTA DE MATERIAS DEL PLAN DE ESTUDIOS
 =============================================*/
+$(document).on('click', '.btnlistamaterias',function (e) {
 
-$(".btnlistamaterias").click(function(){
+// $(".btnlistamaterias").click(function(){
 
   var codigoplane = $(this).attr("codigoplane");
   swal({
@@ -97,8 +106,9 @@ $(".btnlistamaterias").click(function(){
 /*=============================================
 ELIMINAR MATERIA DE PLAN DE ESTUDIO
 =============================================*/
+$(document).on('click', '.btnEliminarmateriaplan',function (e) {
 
-$(".btnEliminarmateriaplan").click(function(){
+// $(".btnEliminarmateriaplan").click(function(){
 	
     var codplanest = $(this).attr("codplanest");
     var idmateria = $(this).attr("idmateria");
@@ -128,8 +138,10 @@ $(".btnEliminarmateriaplan").click(function(){
  /*=============================================
 GENERAR PDF DE LSITA DE MATERIAS DEL PLAN DE ESTUDIO
 =============================================*/
-$(".btnlistadeplan").click(function(){
 
+$(document).on('click', '.btnlistadeplan',function (e) {
+
+// $(".btnlistadeplan").click(function(){
 
     var codigoplans = $(this).attr("codigoplans");
     console.log("este es el codigo de la carta ",codigoplans);

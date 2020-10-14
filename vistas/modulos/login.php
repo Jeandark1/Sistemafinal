@@ -57,7 +57,7 @@
 			<form class="login100-form validate-form" method="post" >
 
 				<span class="login100-form-title p-b-37">
-					INGRESAR AL SECION1
+					INICIO DE SECION
 				</span>
 
 				<div class="wrap-input100 validate-input m-b-20 " data-validate="ingresa tu usuario">
@@ -66,7 +66,7 @@
 				</div>
 
 
-				<label for="pass"> </label> <i class=" btnpas btonpas glyphicon glyphicon-eye-open btnActivarvista" id="#order"></i>
+				<label for="pass"> </label> <button class=" btnpas btonpas glyphicon glyphicon-eye-open btnActivarvista" id="#order"></button>
 				<div class="wrap-input100 validate-input m-b-25" data-validate = "Ingresar Contraseña" required>
                    <input class="input100" type="password" name="ingPassword" id="pass" placeholder="Contraseña" required> 
 					<span class="focus-input100 ">  </span>

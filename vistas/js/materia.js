@@ -4,8 +4,9 @@
 /*=============================================
 EDITAR MATERIA
 =============================================*/
+$(document).on('click', '.btnEditarmateria',function (e) {
 
-$(".btnEditarmateria").click(function(){
+// $(".btnEditarmateria").click(function(){
     
 	var idmateria = $(this).attr("idmateria");
 	console.log("idmateria:",idmateria);
@@ -45,8 +46,9 @@ $(".btnEditarmateria").click(function(){
 /*=============================================
 ELIMINAR MATERIA
 =============================================*/
+$(document).on('click', '.btnEliminarmateria',function (e) {
 
-$(".btnEliminarmateria").click(function(){
+// $(".btnEliminarmateria").click(function(){
 	
     var idmateria = $(this).attr("idmateria");
     var materia = $(this).attr("materia");
@@ -75,7 +77,9 @@ $(".btnEliminarmateria").click(function(){
 /*=============================================
 GENERAR PDF LISTA DE MATERIAS
 =============================================*/
-$(".btnimplistamateria").click(function(){
+$(document).on('click', '.btnimplistamateria',function (e) {
+
+// $(".btnimplistamateria").click(function(){
   var si='si';
     if(si != null){   
     generarpdflista(si);                                      
@@ -95,8 +99,9 @@ window.open("extensiones/pdfs/listamateria.php?si="+si,"LISTA DE LA MATERIA","le
    /*=============================================
    LISTA DE LA MATERIA
 =============================================*/
+$(document).on('click', '.btnlistademateria',function (e) {
 
-$(".btnlistademateria").click(function(){
+// $(".btnlistademateria").click(function(){
 	
   var idmaterias = $(this).attr("idmaterias");
   //var materia = $(this).attr("materia");
@@ -125,7 +130,10 @@ $(".btnlistademateria").click(function(){
 /*=============================================
 GENERAR PDF LISTA DE ESTUDIANTES POR MATERIA
 =============================================*/
-$(".estudiant").click(function(){
+$(document).on('click', '.estudiant',function (e) {
+
+
+// $(".estudiant").click(function(){
 	var codmateria = $(this).attr("codmateria");
 	console.log("este es el codigo",codmateria);
       if(codmateria != null){   
@@ -146,8 +154,9 @@ function generarpdflista(codmateria){
 /*=============================================
 EDITAR REGISTRO DE NOTAS
 =============================================*/
+$(document).on('click', '.btneditarnotas',function (e) {
 
-$(".btneditarnotas").click(function(){
+// $(".btneditarnotas").click(function(){
     
   var estudianteidedi = $(this).attr("estudianteidedi");
   var materiaidedi = $(this).attr("materiaidedi");
@@ -215,7 +224,10 @@ $("#editarnota1"&&"#editarnota2"&&"#editarnota3").change(function(){
 /*=============================================
 ELIMINAR ESTUDIANTE DE LA MATERIA  
 =============================================*/
-$(".btneliminardemateria").click(function(){
+
+$(document).on('click', '.btneliminardemateria',function (e) {
+
+// $(".btneliminardemateria").click(function(){
 	
   var estudiantelisid = $(this).attr("estudiantelisid");
   var materiaidlista = $(this).attr("materiaidlista");
@@ -243,6 +255,7 @@ $(".btneliminardemateria").click(function(){
 /*=============================================
 VALIDAR AUTOCOMPLETADO
 =============================================*/
+
 $("#nuevasigla").change(function(){
 	
 	$(".alert").remove();

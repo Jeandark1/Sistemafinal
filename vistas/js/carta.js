@@ -53,11 +53,16 @@ $(".nuevafotocarta").change(function(){
 
   	}
 })
+
+
 /*=============================================
 EDITAR CARTA
 =============================================*/
  
-$(".btnEditarcartainterna").click(function(){
+$(document).on('click', '.btnEditarcartainterna',function (e) {
+
+
+// $(".btnEditarcartainterna").click(function(){
     
     var idcarta = $(this).attr("idcarta");
     var idusuario = $(this).attr("idusuario");
@@ -108,8 +113,10 @@ $(".btnEditarcartainterna").click(function(){
 /*=============================================
 ELIMINAR CARTA INTERNA
 =============================================*/
+$(document).on('click', '.btnEliminarcartainterna',function (e) {
 
-$(".btnEliminarcartainterna").click(function(){
+
+// $(".btnEliminarcartainterna").click(function(){
 	
     var idcartas = $(this).attr("idcartas");
 	var fotocartas = $(this).attr("fotocartas");
@@ -137,8 +144,9 @@ $(".btnEliminarcartainterna").click(function(){
 /*=============================================
 EDITAR CARTA CREADA
 =============================================*/
+$(document).on('click', '.btnEditarccarta',function (e) {
  
-$(".btnEditarccarta").click(function(){
+// $(".btnEditarccarta").click(function(){
 	
 	var idcartas = $(this).attr("idcartas");
 	var ccarta=idcartas;
@@ -184,7 +192,9 @@ $(".btnEditarccarta").click(function(){
 /*=============================================
 ELIMINAR CARTA CREADA
 =============================================*/
-$(".btnEliminarcartac").click(function(){
+$(document).on('click', '.btnEliminarcartac',function (e) {
+
+// $(".btnEliminarcartac").click(function(){
 	
     var codcartacreada= $(this).attr("codcartacreada");
 	var ciusu = $(this).attr("ciusu");
@@ -212,8 +222,9 @@ $(".btnEliminarcartac").click(function(){
 /*=============================================
 REASIGNAR REGISTRO DE CARTA
 =============================================*/
+$(document).on('click', '.btnreasignar',function (e) {
  
-$(".btnreasignar").click(function(){
+// $(".btnreasignar").click(function(){
 	
 	var codcartah = $(this).attr("codcartah");
 	var cartah=codcartah;
@@ -267,7 +278,10 @@ $(".btnreasignar").click(function(){
    HISTORIAL DE CARTA INTERNA
 =============================================*/
 
-$(".historialcarta").click(function(){
+$(document).on('click', '.historialcarta',function (e) {
+
+
+// $(".historialcarta").click(function(){
 	
 	var idcartahitorial = $(this).attr("idcartahitorial");
 	var codu = $(this).attr("codu");
@@ -297,8 +311,9 @@ $(".historialcarta").click(function(){
   /*=============================================
    HISTORIAL DE CARTA EXTERNA
 =============================================*/
+$(document).on('click', '.historialcartas',function (e) {
 
-$(".historialcartas").click(function(){
+// $(".historialcartas").click(function(){
 	
 	var idcartahitorialex = $(this).attr("idcartahitorialex");
 	var codu = $(this).attr("codu");
@@ -322,7 +337,9 @@ $(".historialcartas").click(function(){
 /*=============================================
 VISOR DE CARTA
 =============================================*/
-$(".btnvisor").click(function(){
+$(document).on('click', '.btnvisor',function (e) {
+
+// $(".btnvisor").click(function(){
     
 	var fotocarta = $(this).attr("fotocarta");
 			$("#fotoApre").val(fotocarta);
@@ -336,21 +353,21 @@ $(".btnvisor").click(function(){
 /*=============================================
 validar fecha de cartas 
 =============================================*/
-$("#nuevoremitente").change(function(){
+// $("#nuevoremitente").change(function(){
 	
-	$(".alert").remove();
+// 	$(".alert").remove();
 	
-      var fechinicialci =(document.getElementById("nuevofechacarta").value);
-      var fechfinalci =(document.getElementById("nuevofechaplazo").value);
-      console.log("fecha1:",fechinicialci);
-      console.log("fecha2:",fechfinalci);
+//       var fechinicialci =(document.getElementById("nuevofechacarta").value);
+//       var fechfinalci =(document.getElementById("nuevofechaplazo").value);
+//       console.log("fecha1:",fechinicialci);
+//       console.log("fecha2:",fechfinalci);
 
-      if( (new Date(fechfinalci).getTime() >= new Date(fechinicialci).getTime()))
-      {
+//       if( (new Date(fechfinalci).getTime() >= new Date(fechinicialci).getTime()))
+//       {
         
-      }else{
-        $("#nuevofechacarta").parent().after('<div class="alert alert-warning">LA FECHA DE CARTA DEBE SER MENOR A LA FECHA PLAZO<br> <p class="alert alert-success">Ingrese primero las fecha y luego el remitente </p> </div>');
-         $("#nuevofechaplazo").val("");
-         $("#nuevoremitente").val("");
-      }
-})
+//       }else{
+//         $("#nuevofechacarta").parent().after('<div class="alert alert-warning">LA FECHA DE CARTA DEBE SER MENOR A LA FECHA PLAZO<br> <p class="alert alert-success">Ingrese primero las fecha y luego el remitente </p> </div>');
+//          $("#nuevofechaplazo").val("");
+//          $("#nuevoremitente").val("");
+//       }
+// })
