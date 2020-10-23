@@ -66,7 +66,7 @@
 				</div>
 
 
-				<label for="pass"> </label> <button class=" btnpas btonpas glyphicon glyphicon-eye-open btnActivarvista" id="#order"></button>
+				<label for="pass"> </label> <div class=" btnpas btonpas glyphicon glyphicon-eye-open btnActivarvista" id="#order"></div>
 				<div class="wrap-input100 validate-input m-b-25" data-validate = "Ingresar Contraseña" required>
                    <input class="input100" type="password" name="ingPassword" id="pass" placeholder="Contraseña" required> 
 					<span class="focus-input100 ">  </span>

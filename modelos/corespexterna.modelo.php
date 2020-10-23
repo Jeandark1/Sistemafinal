@@ -8,12 +8,12 @@ class Modelocorespexterna{
     =============================================*/
 	static public function MdlMostrarcorespexterna($tabla,$tabla1,$tabla2,$item, $valor){
 		   
-		if($item != null) {
-			$stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla WHERE $item = :$item");
-			$stmt->bindParam(":".$item, $valor, PDO::PARAM_STR);
-			$stmt->execute();
-			return $stmt -> fetch();
-			}else{
+		// if($item != null) {
+		// 	$stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla WHERE $item = :$item");
+		// 	$stmt->bindParam(":".$item, $valor, PDO::PARAM_STR);
+		// 	$stmt->execute();
+		// 	return $stmt -> fetch();
+		// 	}else{
 	
 				$stmt = Conexion::conectar()->prepare("SELECT *
                 FROM $tabla c, $tabla1 u, $tabla2 r 
@@ -21,7 +21,7 @@ class Modelocorespexterna{
 				$stmt->execute();
 				return $stmt -> fetchAll();
 	
-			}
+			// }
 			$stmt->close();
 			$stmt = null;
 	}
