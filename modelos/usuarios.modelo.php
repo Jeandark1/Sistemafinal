@@ -9,18 +9,15 @@ class ModeloUsuarios{
 	=============================================*/
 
 	static public function MdlMostrarUsuarios($tabla, $item, $valor){
-		
 		if($item != null) {
 			$stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla WHERE $item = :$item");
 			$stmt->bindParam(":".$item, $valor, PDO::PARAM_STR);
 			$stmt->execute();
 			return $stmt -> fetch();
 			}else{
-	
 				$stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla ");
 				$stmt->execute();
 				return $stmt -> fetchAll();
-	
 			}
 			$stmt->close();
 			$stmt = null;
@@ -31,14 +28,8 @@ class ModeloUsuarios{
 
 	static public function mdlIngresarUsuario($tabla, $datos,$trot,$llave,$estados)
     {
-
 		if($llave === "Administrador"){
-
-			echo "<script>";
-			echo "alert('";
-			echo  $estados;
-		    echo "')</script>";
-
+			
 			$stmt = Conexion::conectar()->prepare("INSERT INTO $tabla(nombre,ap_paterno,ap_materno,usuario,password,perfil,foto,estado,genero,email,celular,direccion,dni,cargo,fech_nac,esta_superu) VALUES ( :nombre,:ap_paterno,:ap_materno,:usuario,:password,:perfil,:foto,:estado,:genero,:email,:celular,:direccion,:dni,:cargo,:fech_nac,:esta_superu)");
 			$stmt->bindParam(":nombre", $datos["nombre"], PDO::PARAM_STR);
 			$stmt->bindParam(":ap_paterno", $datos["ap_paterno"], PDO::PARAM_STR);

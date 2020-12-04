@@ -41,7 +41,6 @@ $(".nuevafoto").change(function(){
 
   			var rutaImagen = event.target.result;
   			$(".previsualizar").attr("src", rutaImagen);
-
   		})
 
   	}
@@ -486,8 +485,33 @@ $("#controlps").change(function(){
  ACTIVAR Y DESACTIVADOR OBSEERVADOR DE CONTRASEÑA
 =============================================*/
 
-$(".btnActivarvista").change(function(){
+// $(".btnActivarvista").change(function(){
 	
+// 	var estadousuario = $(this).attr("activarver");
+// 	if(estadousuario == 1){
+
+// 		$(this).addClass('blanco');
+// 		$(this).removeClass('bg-black-active');
+// 		$(this).attr('activarver',0);
+// 		$("#pass").attr("type","password");
+
+		
+// 	}else{
+// 		$(this).removeClass('blanco');
+// 		$(this).addClass('bg-black-active');
+// 		$(this).attr('activarver',1);
+// 		$("#pass").removeAttr("type");
+// 	}
+
+	
+// 	});
+
+/*=============================================
+ ACTIVAR Y DESACTIVADOR OBSEERVADOR DE CONTRASEÑA
+=============================================*/
+
+$(document).on('click', '.btnActivarvista',function (e) {
+
 	var estadousuario = $(this).attr("activarver");
 	if(estadousuario == 1){
 
@@ -506,5 +530,3 @@ $(".btnActivarvista").change(function(){
 
 	
 	});
-
-

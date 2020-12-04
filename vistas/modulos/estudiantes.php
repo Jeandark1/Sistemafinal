@@ -1,8 +1,9 @@
 <div class="content-wrapper">
   <section class="content-header">
 
-    <h1>
-      Administrar Estudiante
+       <h1>
+         <b> Administrar Estudiante </b>
+      <small>Libro de actas</small>
     </h1>
 
     <ol class="breadcrumb">
@@ -14,10 +15,10 @@
   </section>
 
   <!-- Main content -->
-  <section class="content">
+  <section class="content bg-gray-light" >
 
     
-    <div class="box" style="background: aliceblue">
+    <div class="box" style="background: skyblue">
       <div class="box-header with-border">
 
         <button class="btn btn-info btn-lg" data-toggle="modal" data-target="#modalAgregarEstudiante">
@@ -30,7 +31,7 @@
 
       <div class="box-body">
 
-        <table class="table table-bordered table-striped dt-responsive tablas bg-gray-light" style="width:100%">
+        <table class="table table-bordered table-striped dt-responsive tablas bg-gray " style="width:100%">
           <thead>
             <tr>
 

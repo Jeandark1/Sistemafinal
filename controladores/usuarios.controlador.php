@@ -24,7 +24,6 @@ class ControladorUsuarios{
 				$respuesta = ModeloUsuarios::MdlMostrarUsuarios($tabla, $item, $valor);
 				if($respuesta["usuario"] == $_POST["ingUsuario"] && $respuesta["password"] == $encriptar){
 
-
 					if($respuesta["estado"] == 1){
 						$_SESSION["iniciarSesion"] = "ok";
 						$_SESSION["foto"] = $respuesta["foto"];

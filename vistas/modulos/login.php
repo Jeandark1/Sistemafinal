@@ -47,11 +47,9 @@
 
 <div class="login-logo">
 
-<img src="vistas/img/plantilla/logo-blanco.png" class="img-responsive" style="padding:30px 100px 0px 100px">
-
 </div>
 
-    
+<img src="vistas/img/plantilla/logo-blanco.png" class="img-responsive" style="padding:30px 100px 0px 100px">
 		<div class="wrap-login100 p-l-55 p-r-55 p-t-80 p-b-30" >
 
 			<form class="login100-form validate-form" method="post" >
@@ -66,7 +64,7 @@
 				</div>
 
 
-				<label for="pass"> </label> <div class=" btnpas btonpas glyphicon glyphicon-eye-open btnActivarvista" id="#order"></div>
+				<label for="pass"> </label> <i class=" btnpas btonpas glyphicon glyphicon-eye-open btnActivarvista" id="#order"></i>
 				<div class="wrap-input100 validate-input m-b-25" data-validate = "Ingresar Contraseña" required>
                    <input class="input100" type="password" name="ingPassword" id="pass" placeholder="Contraseña" required> 
 					<span class="focus-input100 ">  </span>

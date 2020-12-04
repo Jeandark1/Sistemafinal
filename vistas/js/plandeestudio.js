@@ -136,7 +136,7 @@ $(document).on('click', '.btnEliminarmateriaplan',function (e) {
   })
 
  /*=============================================
-GENERAR PDF DE LSITA DE MATERIAS DEL PLAN DE ESTUDIO
+GENERAR PDF DE LISTA DE MATERIAS DEL PLAN DE ESTUDIO
 =============================================*/
 
 $(document).on('click', '.btnlistadeplan',function (e) {
@@ -164,24 +164,24 @@ function generarpdfesplane(codigoplans){
 
 
 
-/*=============================================
-validar fecha
-=============================================*/
-$("#nmencion").change(function(){
+// /*=============================================
+// validar fecha
+// =============================================*/
+// $("#nmencion").change(function(){
 	
-	$(".alert").remove();
+// 	$(".alert").remove();
 	
-      var fechinicial =(document.getElementById("fechainiciopl").value);
-      var fechfinal =(document.getElementById("fechafinalpl").value);
-      console.log("idusuario1:",fechinicial);
-      console.log("idusuario2:",fechfinal);
+//       var fechinicial =(document.getElementById("fechainiciopl").value);
+//       var fechfinal =(document.getElementById("fechafinalpl").value);
+//       console.log("idusuario1:",fechinicial);
+//       console.log("idusuario2:",fechfinal);
 
-      if( (new Date(fechfinal).getTime() >= new Date(fechinicial).getTime()))
-      {
+//       if( (new Date(fechfinal).getTime() >= new Date(fechinicial).getTime()))
+//       {
         
-      }else{
-        $("#fechainiciopl").parent().after('<div class="alert alert-warning">LA FECHA INICIAL DEBE SER MENOR A LA FECHA FINAL<br> <p class="alert alert-success">Ingrese primero la fecha y luego la mencion  </p> </div>');
-         $("#fechafinalpl").val("");
-         $("#nmencion").val("");
-      }
-})
+//       }else{
+//         $("#fechainiciopl").parent().after('<div class="alert alert-warning">LA FECHA INICIAL DEBE SER MENOR A LA FECHA FINAL<br> <p class="alert alert-success">Ingrese primero la fecha y luego la mencion  </p> </div>');
+//          $("#fechafinalpl").val("");
+//          $("#nmencion").val("");
+//       }
+// })

@@ -84,6 +84,32 @@ class Modelocorespinterna{
 	}
 
 
+
+
+
+
+/*=============================================
+	MOSTRAR  TAREAS DEL USUARIO 
+    =============================================*/
+	static public function MdlMostrartareas($id,$item,$tabla1,$tabla2){
+		
+				$stmt = Conexion::conectar()->prepare("SELECT c.remitente, c.entidad, c.referencia, c.observacion, c.fechaplazo, c.prioridad, c.ruta, c.estadoproceso, c.tipocarta FROM $tabla1 r, $tabla2 c WHERE  
+				 r.cod_carta= c.cod_carta and r.dnia='$id' and c.estadoproceso != 'Terminado' and c.estadoproceso != 'Desactivado'");
+
+// ORDER by r.fecharecib
+				$stmt->execute();
+				return $stmt -> fetchAll();
+			
+	}
+
+
+
+
+
+
+
+
+
 /*=============================================
 	INGRESAR REGISTRO DE CARTA
 =============================================*/
@@ -319,10 +345,7 @@ static public function mdlBorrarcarta($tabla, $datos){
 	$stmt1->bindParam(":estadoproceso", $datos1["estadoproceso"], PDO::PARAM_STR);
 	$stmt1->bindParam(":observacion",$datos1["observacion"], PDO::PARAM_STR);
 	if ($stmt1->execute()) { $u= "ok";} else { $u= "error";}
-	echo "<script>";
-	echo "alert('";
-	echo  $u.' fase 2 recibe'.$codausuario;
-echo "')</script>";
+	
     $codusu=$codausuario;
     $clave3= controladorids::traercodigousuario($codusu);
      $clave =$idcartas;

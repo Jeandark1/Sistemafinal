@@ -177,8 +177,21 @@ class Controladorcorespinterna
         return $respuesta;
     }
 
-
     
+    
+
+/*=============================================
+	MOSTRAR  TAREAS DEL USUARIO EN CORRESPONDENCIA
+	=============================================*/
+    static public function ctrtareas ($item, $valor, $id)
+    {
+        $tabla1 ='recibe';
+        $tabla2 ='carta';
+        $respuesta = Modelocorespinterna::MdlMostrartareas($id, $item,$tabla1,$tabla2);
+
+        return $respuesta;
+    }
+
     /*=============================================
 	MOSTRAR  CARTA HISTORIAL INTERNA
 	=============================================*/

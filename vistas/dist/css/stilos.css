@@ -50,7 +50,11 @@
     background-size: cover; 
     width: 100%;
 }
- 
+.inicio{
+    background: url("../img/photo4.jpg") center center;
+    background-size: cover; 
+    width: 100%;
+}
  
 .cuadrog {
     border-top-left-radius: 0;
@@ -256,6 +260,11 @@ margin: 0; /* es para el ultimo elemento o fir of tipe para el primero */
 
 .jean{
     color: rgb(14, 13, 13);
+    font-family: 'Georgia', Times, serif;
+}   
+
+.geor{
+    color: rgb(240, 231, 231);
     font-family: 'Georgia', Times, serif;
 }   
 .jean2{

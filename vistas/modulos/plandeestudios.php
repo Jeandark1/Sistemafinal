@@ -1,8 +1,11 @@
 <div class="content-wrapper">
   <section class="content-header">
 
+ 
+
     <h1>
-      Seccion Plan de Estudios
+         <b> Administrar Planes de Estudio </b>
+      <small>Tabla de Registros    </small>
     </h1>
 
     <ol class="breadcrumb">
@@ -14,10 +17,10 @@
   </section>
 
   <!-- Main content -->
-  <section class="content">
+  <section class="content bg-gray-light">
 
 
-    <div class="box bg-gray-light" >
+    <div class="box" style="background: skyblue">
       <div class="box-header with-border">
 
         <button class="btn btn-info btn-lg" data-toggle="modal" data-target="#modalAgregarplan">
@@ -30,7 +33,7 @@
 
       <div class="box-body">
 
-        <table class="table table-bordered table-striped dt-responsive tablas " style="width:100%; background: aliceblue; ">
+        <table class="table table-bordered table-striped dt-responsive tablas bg-gray" style="width:100%; background: aliceblue; ">
           <thead>
             <tr>
               <th style="width: 1px">#NRO</th>
